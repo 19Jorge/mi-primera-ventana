@@ -41,7 +41,7 @@ public class MyRadioButtonsWindows  {
         JButton okButton = new JButton("ok");
         mainPanel.add(okButton);
 
-        okButton.addActionListener(new ActionListener() {
+        /*okButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String selected = osBg.getSelection().getActionCommand();
@@ -50,6 +50,14 @@ public class MyRadioButtonsWindows  {
 
                 osIconLb.setIcon(new ImageIcon(selected + ".png"));
             }
+        });*/
+
+        okButton.addActionListener(e -> {
+            String selected = osBg.getSelection().getActionCommand();
+
+            JOptionPane.showMessageDialog(f, "ha seleccioado: " + selected);
+
+            osIconLb.setIcon(new ImageIcon(selected + ".png"));
         });
         mainPanel.add(okButton);
 
